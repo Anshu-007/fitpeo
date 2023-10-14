@@ -1,0 +1,128 @@
+.sidebar-wrapper{
+    height: 100%;
+    width: 200px;
+    background-color: #040440;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-submenu-wrapper{
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.logo-wrapper{
+    display: flex;
+    height: 25%;
+    
+    align-items: center;
+    gap: 4%;
+}
+.logo-image{
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+    display: flex;
+}
+.logo-name{
+    color:white;
+    font-size: 1.2rem;
+
+}
+.submenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.submenu-component{
+    display: flex;
+    color: gray;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 5px;
+    height: 30px;
+    border-radius: 4px;
+    width: 160px;
+    font-size: smaller;
+    cursor: pointer;
+    
+}
+/* .submenu-component::after{
+
+    background-color: rgba(255, 255, 255, 0.748);
+} */
+
+    
+
+.submenu-image{
+    display: flex;
+    align-items: center;
+    filter: invert(0.5);
+}
+.submenu-image-active{
+    display: flex;
+    align-items: center;
+    filter: invert(1);
+    
+}
+.submenu-text{
+    
+    width: 80px;
+    display: flex;
+}
+.arrow{
+    
+}
+.admin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 80px;
+    background-color: #2d2d69;
+    width: 190px;
+    border-radius: 4px;
+    height: 60px;
+} 
+
+.active-bar-element{
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 10px;
+    background-color:#2d2d69;
+    border-radius: 4px;
+    width: 160px;
+    font-size: smaller;
+    padding: 2px 5px;
+    height: 30px;
+    cursor: pointer;
+}
+.admin-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background: white;
+}
+.admin-wrapper{
+    display: flex;
+    align-items: center;
+    width: 170px;
+    gap: 10px;
+}
+.admin-details{
+    display: flex;
+    flex-direction: column;
+}
+.admin-name{
+    font-size: 15px;
+    font-weight: 600;
+}
+.admin-position{
+    font-size: 10px;
+}

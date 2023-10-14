@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --sidebarcolor:#040440;
+    --sidebartextcolr :hsl(231.89deg 18.23% 60.2%);
+    --appBackground : #f5f6f8;
+    --componentBackground : #ffffff;
+}
+.App{
+    display: flex;
+}
