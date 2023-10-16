@@ -259,16 +259,8 @@
 .image{
     height: 60px;
 }
-
-
-@media screen and (max-width : 620px){
-    .chart-wrapper{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .table-wrapper{
-        margin-top: 360px;
-    }
-
+.instead-margin{
+    height: 100%;
+    width: 200px;
 }
+

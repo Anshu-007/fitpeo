@@ -9,9 +9,9 @@ import note from '../Assets/note.png'
 
 const Home = () => {
     const income = [{name : "Earning", color : "#dcffeb", image : money , amount : "198", increament : 37.8},{name : "Orders", color : "#e7dbff", image : note , amount : "198", increament : -2},{name : "Balance", color : "#ccf2ff", image : wallet , amount : "198", increament : -2},{name : "Total Sales", color : "#feb0d8", image : bag , amount : "198", increament : 11}]
-  return (
+      return (
     <div className='home-wrapper'>
-        <div className='user-input-wrapper'>
+                <div className='user-input-wrapper'>
             <div className='username'>Hello  Fitpeo ,</div>
             <div>
                 <img src="" alt="" />

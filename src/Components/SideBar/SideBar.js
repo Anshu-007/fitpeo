@@ -12,12 +12,25 @@ import hexagon from '../Assets/hexagun.svg'
 
 const SideBar = () => {
   const [activeSubMenu, setActiveSubMenu] = useState("Dashboard");
+  const [sideBarOpen, setSideBarOpen] = useState(window.innerWidth < 860 ? false : true);
 
   const submenu = [{ name: "Dashboard", image: dashboard }, { name: "Customers", image: customers }, { name: "Product", image: product }, { name: "Income", image: income }, { name: "Promote", image: promote }, { name: "Help", image: help }]
+
   function handleSubMenu(e, submenuName) {
     setActiveSubMenu(submenuName);
-
   }
+  
+
+  window.onresize = function() {
+    const resolution = window.innerWidth;
+    console.log(resolution)
+    if(resolution < 860){
+      setSideBarOpen(false);
+    }else{
+      setSideBarOpen(true);
+    }
+  };
+
   return (
     <div className='sidebar-wrapper'>
       <div className='logo-submenu-wrapper'>
@@ -25,9 +38,9 @@ const SideBar = () => {
           <div className='logo-image'>
             <img src={hexagon} alt="" />
           </div>
-          <div className='logo-name'>
+          {sideBarOpen ? <div className='logo-name'>
             Dashboard
-          </div>
+          </div> : null}
         </div>
         <div className='submenu'>
           {submenu.map((menu) => {
@@ -36,8 +49,8 @@ const SideBar = () => {
                       <div className={activeSubMenu === menu.name ? "submenu-image-active" : 'submenu-image'}>
                         <img src={menu.image} alt="" />
                       </div>
-                      <div className='submenu-text'>{menu.name}</div>
-                      {activeSubMenu === menu.name ? null : <div className='arrow'>❯</div>}
+                      {sideBarOpen===true?<><div className='submenu-text'>{menu.name}</div>
+                      {activeSubMenu === menu.name ? null : <div className='arrow'>❯</div>}</>:null}
                     </div>
                   );
 
@@ -47,12 +60,12 @@ const SideBar = () => {
       <div className='admin'>
         <div className='admin-wrapper'>
           <div className='admin-img'></div>
-          <div className='admin-details'>
+          {sideBarOpen ? <div className='admin-details'>
             <div className='admin-name'>Evano</div>
             <div className='admin-position'>Project Manager</div>
-          </div>
+          </div> : null}
         </div>
-        <div className='arrow'>❯</div>
+        {sideBarOpen ? <div className='arrow'>❯</div> : null}
       </div>
     </div>
   )
